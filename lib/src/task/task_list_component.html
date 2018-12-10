@@ -1,0 +1,14 @@
+<div>
+    <strong>{{dateTime}} / {{routine}}</strong>
+    <div>
+        <span>[ ]</span><span>name</span><span>routine</span>
+    </div>
+    <!--<ng-container >-->
+    <!--ng-template/ng-container -> templateだとhtmlにレンダリングされて邪魔になる-->
+    <task-item
+            *ngFor="let task of taskWithCompletes"
+            [task]="task.task"
+            [complete]="task.complete"
+            (onChangeCheckStatus)="onChangeCheck($event, task)">
+    </task-item>
+</div>

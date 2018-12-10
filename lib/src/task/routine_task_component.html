@@ -1,0 +1,14 @@
+<task-list [dateTime]="dateTime" [routine]="routine"></task-list>
+<ng-container *ngIf="aroundTaskList!=null">
+    <nav>
+        <a [routerLink]="tasksUrl(aroundTaskList.prev.fragment(), aroundTaskList.prev.dateTime)">
+            {{aroundTaskList.prev.display()}}
+        </a>
+    </nav>
+    <nav>
+        <a [routerLink]="tasksUrl(aroundTaskList.next.fragment(), aroundTaskList.next.dateTime)">
+            {{aroundTaskList.next.display()}}
+        </a>
+    </nav>
+</ng-container>
+

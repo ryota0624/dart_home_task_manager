@@ -1,0 +1,21 @@
+<h1>My First AngularDart App</h1>
+
+<!--<todo-list></todo-list>-->
+<!--<task-list [dateTime]="dateTime"></task-list>-->
+
+<nav>
+    <a [routerLink]="RoutePaths.todos.toUrl()"
+       [routerLinkActive]="'active'">Todos</a>
+</nav>
+<nav>
+    <a [routerLink]="dailyTasksUrl(dateTime)">dailyTasks</a>
+</nav>
+<nav>
+    <a [routerLink]="weeklyTasksUrl(dateTime)">weeklyTasks</a>
+</nav>
+
+<nav>
+    <a [routerLink]="monthlyTasksUrl(dateTime)">monthlyTasks</a>
+</nav>
+
+<router-outlet [routes]="Routes.all"></router-outlet>
