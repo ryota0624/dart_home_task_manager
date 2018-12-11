@@ -5,6 +5,8 @@ import 'package:angular/core.dart';
 
 import 'task.dart';
 
+import 'package:firebase/firebase.dart';
+
 @Injectable()
 class TaskService {
   List<Task> mockTasks = [
@@ -27,6 +29,5 @@ class TaskService {
 
   Future<void> unCompleteTask(Task task) async {
     print("${task.name} is unCompleted");
-
   }
 }

@@ -102,7 +102,7 @@ class MonthlyPagingDate extends PagingDate {
     templateUrl: RoutineTaskComponent.templateUrl,
     directives: RoutineTaskComponent.directives)
 class MonthlyTaskComponent with RoutineTaskComponent, UrlBuilder {
-  Routine routine = Routine.Weekly;
+  Routine routine = Routine.Monthly;
 
   AroundTaskList getAroundTaskList(DateTime dateTime) {
     return AroundTaskList(
